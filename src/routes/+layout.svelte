@@ -1,8 +1,21 @@
 <script>
   import '../app.css';
+  import { env } from '$env/dynamic/public';
 
   let { children } = $props();
 </script>
+
+<svelte:head>
+  {#if env.PUBLIC_GA4_MEASUREMENT_ID}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={env.PUBLIC_GA4_MEASUREMENT_ID}"></script>
+    {@html `<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${env.PUBLIC_GA4_MEASUREMENT_ID}');
+    </script>`}
+  {/if}
+</svelte:head>
 
 <a href="#main" class="skip-link">Skip to main content</a>
 
