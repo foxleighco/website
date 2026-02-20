@@ -27,8 +27,8 @@
     </div>
     <div class="contact__grid">
       <div class="contact__info">
-        <a href="mailto:contact@foxleigh.co" class="contact__email">
-          contact@foxleigh.co
+        <a href="mailto:business@foxleigh.co" class="contact__email">
+          business@foxleigh.co
         </a>
         <p class="contact__note">
           For commercial, partnership, and administrative enquiries.
